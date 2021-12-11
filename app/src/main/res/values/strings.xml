@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LAMD_U5_Eje1_GeoMapaTec</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
