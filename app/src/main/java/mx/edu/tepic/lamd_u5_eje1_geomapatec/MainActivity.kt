@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     var listaID = ArrayList<String>()
    lateinit var locacion : LocationManager
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Aqui se cargan manualmente la lista
+        /*
         // agregar librebrias en module implementation 'com.google.android.gms:play-services-location:17.0.0'
         baseRemota.collection("tecnologico")
                 //por si da error
@@ -67,21 +69,17 @@ class MainActivity : AppCompatActivity() {
 
             } //Aqui termina la carga manual
 
+         */
+
         //Metodo para cargar lista con click
         cargarLista()
 
-        button.setOnClickListener{
-            //miUbicacion()
-        }
         locacion = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         var oyente = Oyente(this)
         locacion.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,
             01f,oyente)
     }
 
-    fun mensaje(s:String){
-        Toast.makeText(this,s,Toast.LENGTH_LONG).show()
-    }
 
     fun cargarLista(){
         baseRemota.collection("tecnologico")
@@ -91,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                     return@addSnapshotListener
                 }//if
                 var resultado = ""
-                var listaCadena= ""
+                var listaCadena=""
                 posicion.clear()
                 dataLista.clear()
                 listaID.clear()
@@ -101,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                     data.posicion1 = document.getGeoPoint("posicion1")!!
                     data.posicion2 = document.getGeoPoint("posicion2")!!
 
-                    resultado += data.toString() + "\n\n"
+                    resultado += data.toString() + "\n" + "\n"
                     listaCadena=data.toString()
                     posicion.add(data)
                     dataLista.add(listaCadena)
@@ -128,6 +126,10 @@ class MainActivity : AppCompatActivity() {
         }//lista
     }//cargar Lista
 /////////////
+
+fun mensaje(s:String){
+    Toast.makeText(this,s,Toast.LENGTH_LONG).show()
+}
 
     fun cargarListaBuscador(edificio:String){
         baseRemota.collection("tecnologico")
