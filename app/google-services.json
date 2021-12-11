@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81185377947",
+    "project_id": "mapatec-79259",
+    "storage_bucket": "mapatec-79259.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81185377947:android:eab9355cdf4912b80f803e",
+        "android_client_info": {
+          "package_name": "mx.edu.tepic.lamd_u5_eje1_geomapatec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81185377947-dgne144652vlltprvlimt8fgssfkfuvt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqPPFVeQ1Bi-9gNmej8r9jexCYHpNB6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81185377947-dgne144652vlltprvlimt8fgssfkfuvt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
