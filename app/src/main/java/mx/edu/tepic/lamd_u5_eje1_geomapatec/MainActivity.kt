@@ -13,16 +13,19 @@ import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 
 import com.google.android.gms.location.LocationServices
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import kotlinx.android.synthetic.main.activity_main.*
-import mx.edu.tepic.lamd_u5_eje1_geomapatec.databinding.ActivityMainBinding
+import mx.edu.tepic.lamd_u5_eje1_geomapatec.databinding.ActivityMainFotosBinding
 
 class MainActivity : AppCompatActivity() {
     var baseRemota = FirebaseFirestore.getInstance()
@@ -56,6 +59,17 @@ class MainActivity : AppCompatActivity() {
             LocationManager.GPS_PROVIDER, 0,
             01f, oyente
         )
+
+        val fab: View = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            mensaje("")
+
+            AlertDialog.Builder(this)
+                .setTitle("Acerca de..")
+                .setMessage("Bryan Mahomedalid Lopez Aguirre\nJorge Jorge Varela Garcia\nEdgar Guadalupe Gonzalez Valenzuela\nJosé Esaú Díaz Hernández\nOmar Bigvaí Villegas Díaz\"")
+                .setPositiveButton("OK") { p, q -> }
+                .show()
+        }
     }
 
 
