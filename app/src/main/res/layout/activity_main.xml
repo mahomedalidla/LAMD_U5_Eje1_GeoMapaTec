@@ -79,7 +79,10 @@
                 android:id="@+id/lista"
                 android:background="#431A8C"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+
+                />
 
         </LinearLayout>
 
